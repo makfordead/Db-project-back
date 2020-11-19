@@ -23,6 +23,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,7 @@ public class RecipeServiceImpl implements RecipeService {
     UserRepository userRepository;
 
     @Override
+    @Transactional
     public ResponseEntity<RecipeResponse> createRecipe(final RecipeRequest recipeRequest
     , final Principal principal) {
         Recipe recipe = modelMapper.map(recipeRequest,Recipe.class);
@@ -59,6 +61,8 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    @Transactional
+
     public ResponseEntity<AllRecipesResponse> getAllRecipes(final Principal principal) {
 
         final Iterable<Recipe> recipes = recipeRepository.findAll(

@@ -2,9 +2,9 @@ spring:
   application:
     name: recipe-finder
   datasource:
-    url: jdbc:postgresql://ec2-54-83-201-84.compute-1.amazonaws.com:5432/d42ci7osqr08hh
-    username: ewitqzqszbbtpl
-    password: 7e0d5baba7c802129f4382703d803123ca301e34176ecfec44a2470b7d0248ab
+    url: jdbc:postgresql://ec2-3-208-224-152.compute-1.amazonaws.com:5432/dabog5qjort3h
+    username: csezqgvuswqgax
+    password: 46b6747dc484f87e2ad35f4879638db10efdbe74a7e451ab732344ba7bb63096
     hikari:
       connectionTimeout: 3000
       idleTimeout: 600000
